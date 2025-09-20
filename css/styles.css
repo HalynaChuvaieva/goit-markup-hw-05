@@ -492,13 +492,45 @@ img{
 }
 
 .modal{
+    position: relative;
     padding: 72px 24px 24px;
     max-width: 408px;
-    max-height: 584px;
+    min-height: 584px;
     border-radius: 4px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
     overflow: auto;
+}
+
+.close-button{
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    border-radius: 100%;
+    background-color: #e7e9fc;;
+    stroke-width: 1px;
+    stroke: rgba(0, 0, 0, 0.1);
+    transition: background-color 250ms ease-in-out;
+}
+
+.close{
+    position: absolute;
+    fill: #2e2f42;
+    top: 50;
+    left: 50;
+    transform: translate(-50%, -50%);
+    transition: fill 250ms ease-in-out;
+}
+
+.close-button:hover, .close-button:focus{
+    background-color: #404bbf;
+    border: none;
+    .close{
+        fill: #fff;
+    }
 }
 
 .modal-header{
@@ -522,12 +554,15 @@ img{
     width: 360px;
     min-height: 40px;
 }
-.form-label .textarea{
-    padding-bottom: 4px;
+.form-label, .textarea{
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
+}
+
+.form-label{
+    padding-bottom: 4px;
 }
 
 .textarea{
@@ -542,4 +577,53 @@ img{
 input:hover, input:focus, textarea:hover,
 textarea:focus{
     border-color: #4d5ae5;
+}
+
+.modal-field{
+    display: flex;
+    margin-top: 16px;
+}
+
+.modal-field .policy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    a{
+        line-height: 1.33;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #4d5ae5;
+    }
+}
+.checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    margin-right: 8px;
+    transition: background-color 250ms ease-in-out;
+}
+
+.check-icon{
+    fill: transparent;
+    transition: fill 250ms ease-in-out;
+}
+.modal-check:checked + .policy > .checkbox{
+    background-color: #404bbf;
+    border: none;
+    .check-icon{
+        fill: #F4F4FD
+    }
+}
+.form .button{
+    margin-top: 24px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }

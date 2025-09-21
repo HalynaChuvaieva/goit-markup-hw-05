@@ -652,6 +652,7 @@ img{
 }
 
 .textarea{
+    height: 120px;
     resize: none;
     color: rgba(46, 47, 66, 0.4);
     padding: 8px 16px;
@@ -670,8 +671,8 @@ input:focus + .modal-icon{
 .modal-field{
     display: flex;
     margin-top: 16px;
+    margin-bottom: 24px;
 }
-
 .modal-field .policy{
     display: flex;
     justify-content: center;
@@ -690,7 +691,8 @@ input:focus + .modal-icon{
 }
 
 .checkbox{
-    display: flex;
+    fill: transparent;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 16px;
@@ -699,7 +701,7 @@ input:focus + .modal-icon{
     border: 1px solid rgba(46, 47, 66, 0.4);
     background-color: transparent;
     margin-right: 8px;
-    transition: background-color 250ms ease-in-out;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .check-icon{
@@ -709,10 +711,12 @@ input:focus + .modal-icon{
 .modal-check:checked + .policy > .checkbox{
     background-color: #404bbf;
     border: none;
-    .check-icon{
-        fill: #F4F4FD
-    }
 }
+
+.modal-check:checked + .policy > .checkbox > .check-icon{
+    fill: #F4F4FD;
+}
+
 .form .button{
     margin-top: 24px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);

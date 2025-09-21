@@ -674,9 +674,6 @@ input:focus + .modal-icon{
     margin-bottom: 24px;
 }
 .modal-field .policy{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
@@ -706,7 +703,6 @@ input:focus + .modal-icon{
 
 .check-icon{
     fill: transparent;
-    transition: fill 250ms ease-in-out;
 }
 .modal-check:checked + .policy > .checkbox{
     background-color: #404bbf;

@@ -706,6 +706,7 @@ input:focus + .modal-icon{
 }
 .modal-check:checked + .policy > .checkbox{
     background-color: #404bbf;
+    fill: #F4F4FD;
     border: none;
 }
 

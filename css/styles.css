@@ -607,12 +607,6 @@ img{
     color: #2e2f42;
 }
 
-.form{
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
-}
-
 .form-input{
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
